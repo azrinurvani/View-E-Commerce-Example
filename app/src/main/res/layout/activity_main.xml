@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/light_grey"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--    Toolbar-->
+            <androidx.appcompat.widget.Toolbar
+                android:background="@color/primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:text="@string/title"
+                        android:textColor="@color/white"
+                        android:textSize="19dp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RelativeLayout
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white"
+                        android:drawableStart="@drawable/ic_search_24"
+                        android:text="Cari Sesuatu..."
+                        android:layout_gravity="left|center_vertical"
+                        android:textAllCaps="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_search_24" />
+
+                    <RelativeLayout
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:clickable="true"
+                        android:backgroundTint="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
+                        app:cardCornerRadius="5dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_favourite_24"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+                    </androidx.cardview.widget.CardView>
+                    <RelativeLayout
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"/>
+
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <!--    Header-->
+            <LinearLayout
+                android:background="@drawable/header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+            <!--    Splash-->
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="-90dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/splash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="10dp"
+                        android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:adjustViewBounds="true"
+                            android:background="@color/white"
+                            android:cropToPadding="true"
+                            android:src="@drawable/g1"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="@string/promo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:text="Nike Air Max 2090"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginTop="3dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="Rp. 1.200.000,-"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/dark_navy"
+                        android:textColor="@color/white"
+                        android:text="Ambil Promo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+<!--            Menu-->
+            <LinearLayout
+                android:padding="15dp"
+                android:paddingBottom="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--        card menu-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:background="@drawable/card_menu"
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/shop"
+                            android:cropToPadding="true"
+                            android:adjustViewBounds="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        android:text="@string/categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:background="@drawable/card_menu"
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/discount"
+                            android:cropToPadding="true"
+                            android:adjustViewBounds="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        android:text="@string/discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:background="@drawable/card_menu"
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/label_tag"
+                            android:cropToPadding="true"
+                            android:adjustViewBounds="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        android:text="@string/promo_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:background="@drawable/card_menu"
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/graph" />
+
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        android:text="@string/compare"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+<!--            Product-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:background="@drawable/background_new_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--            Title Swipe-->
+                <LinearLayout
+                    android:padding="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="@string/new_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:text="@string/view_all"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/primary"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+<!--                Item Sepatu (bisa diganti dengan recycler view)-->
+                <HorizontalScrollView
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!--  card product-->
+                        <LinearLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:background="@drawable/card_product"
+                            android:padding="4dp"
+                            android:orientation="vertical"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:src="@drawable/g2"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="Nike Air Max 1090"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="7 Warna"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="Rp. 750.000,-"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+
+                        <!--  card product-->
+                        <LinearLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:background="@drawable/card_product"
+                            android:padding="4dp"
+                            android:orientation="vertical"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:src="@drawable/g3"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="Nike Air Max 1090"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="7 Warna"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="Rp. 750.000,-"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+
+                        <!--  card product-->
+                        <LinearLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:background="@drawable/card_product"
+                            android:padding="4dp"
+                            android:orientation="vertical"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:src="@drawable/g4"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="Nike Air Max 1090"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="7 Warna"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="Rp. 750.000,-"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+
+                        <!--  card product-->
+                        <LinearLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:background="@drawable/card_product"
+                            android:padding="4dp"
+                            android:orientation="vertical"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:src="@drawable/g2"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="Nike Air Max 1090"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="7 Warna"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="Rp. 750.000,-"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+
+                        <!--  card product-->
+                        <LinearLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:background="@drawable/card_product"
+                            android:padding="4dp"
+                            android:orientation="vertical"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:src="@drawable/g5"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="Nike Air Max 1090"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="7 Warna"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:text="Rp. 750.000,-"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:menu="@menu/navigation_menu"
+        app:labelVisibilityMode="labeled"
+        android:background="@color/blue_tosca"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+</LinearLayout>
